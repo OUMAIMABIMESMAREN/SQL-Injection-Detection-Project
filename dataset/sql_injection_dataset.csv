@@ -1,0 +1,1201 @@
+query,label
+SELECT * FROM clients WHERE email LIKE '%10%',0
+SELECT * FROM articles LIMIT 403 OFFSET 201,0
+"SELECT phone, name FROM employees",0
+DELETE FROM orders WHERE id = 285,0
+SELECT * FROM logs WHERE username = '1' AND password = '' OR ''='',1
+SELECT * FROM logs WHERE address = '100',0
+SELECT * FROM orders WHERE id=375 OR '1'='1' --,1
+SELECT * FROM students WHERE id=108 OR '1'='1' --,1
+'; DROP TABLE students; --,1
+"SELECT * FROM articles WHERE created_at='10' UNION SELECT username, password FROM articles --",1
+SELECT * FROM accounts WHERE username = '2' OR '1'='1' --,1
+' OR EXISTS(SELECT * FROM students) --,1
+' OR EXISTS(SELECT * FROM orders) --,1
+"' AND SUBSTRING((SELECT price FROM transactions LIMIT 1),1,1)='a",1
+SELECT * FROM clients WHERE amount = 'john' OR '1'='1',1
+SELECT * FROM comments WHERE description = '' OR ''=',1
+UPDATE logs SET status = '2' WHERE id = 339,0
+"SELECT * FROM articles WHERE id='paris' UNION SELECT username, password FROM articles --",1
+SELECT * FROM invoices WHERE username='admin' OR 1=1#,1
+SELECT * FROM categories WHERE username = 'paris' OR '1'='1' --,1
+SELECT * FROM users WHERE price = '' OR ''=',1
+SELECT * FROM accounts LIMIT 357 OFFSET 178,0
+SELECT * FROM orders WHERE username = 'guest' AND password = '' OR ''='',1
+ALTER TABLE suppliers ADD COLUMN age VARCHAR(255),0
+SELECT * FROM accounts WHERE login='paris' AND password='' OR '1'='1',1
+"SELECT id, status FROM products",0
+'; DELETE FROM students WHERE 1=1; --,1
+SELECT * FROM suppliers WHERE amount = '50.5',0
+SELECT AVG(username) FROM articles,0
+SELECT * FROM users WHERE price LIKE '%guest%',0
+SELECT * FROM suppliers WHERE id = 272 OR 1=1,1
+SELECT * FROM suppliers WHERE username = '100' OR '1'='1' --,1
+SELECT * FROM invoices WHERE phone='10' OR 1=1 --,1
+ALTER TABLE users ADD COLUMN description VARCHAR(255),0
+"' UNION SELECT username, password FROM payments --",1
+SELECT * FROM categories WHERE email BETWEEN 356 AND 406,0
+SELECT * FROM orders WHERE username = '2024-01-01' AND password = '' OR ''='',1
+"SELECT * FROM sessions WHERE id IN (77, 78, 79)",0
+x' AND email IS NULL; --,1
+SELECT * FROM users WHERE id = 166 OR 1=1,1
+"' AND SUBSTRING((SELECT amount FROM articles LIMIT 1),1,1)='a",1
+SELECT * FROM articles WHERE id = 326 OR 1=1,1
+SELECT * FROM categories WHERE role = '' OR ''=',1
+SELECT * FROM suppliers WHERE username='guest' OR 1=1#,1
+SELECT * FROM products WHERE id = 3,0
+SELECT DISTINCT email FROM employees,0
+"SELECT role, stock FROM invoices",0
+'; DELETE FROM comments WHERE 1=1; --,1
+SELECT * FROM clients WHERE phone = 'john' OR '1'='1',1
+"INSERT INTO products (stock, amount) VALUES ('client01', '1')",0
+SELECT * FROM products WHERE address='guest' OR 1=1 --,1
+SELECT * FROM accounts WHERE id = 325 OR 1=1,1
+SELECT * FROM transactions WHERE category = 304 AND username = 'alice',0
+ALTER TABLE logs ADD COLUMN age VARCHAR(255),0
+SELECT * FROM suppliers WHERE username='john' OR 1=1#,1
+SELECT * FROM comments WHERE email = '' OR ''=',1
+"SELECT * FROM logs WHERE description='admin' UNION SELECT username, password FROM logs --",1
+UPDATE invoices SET name = 'test' WHERE id = 347,0
+SELECT * FROM comments WHERE description = '50.5' OR '1'='1',1
+"SELECT category, phone FROM suppliers",0
+SELECT * FROM sessions a JOIN orders b ON a.id = b.sessions_id,0
+' OR 1=1; SELECT * FROM products; --,1
+DELETE FROM users WHERE id = 260,0
+' OR EXISTS(SELECT * FROM clients) --,1
+' OR (SELECT COUNT(*) FROM suppliers) > 0 --,1
+SELECT price FROM sessions GROUP BY price,0
+SELECT * FROM invoices WHERE stock = 'paris',0
+SELECT * FROM invoices WHERE login='2024-01-01' AND password='' OR '1'='1',1
+"SELECT * FROM transactions WHERE address='100' UNION SELECT username, password FROM transactions --",1
+SELECT * FROM suppliers WHERE login='2' AND password='' OR '1'='1',1
+"SELECT status, category FROM suppliers",0
+SELECT * FROM categories WHERE created_at = 294 AND name = 'john',0
+SELECT * FROM invoices WHERE username = '2024-01-01' OR '1'='1' --,1
+UPDATE logs SET name = '2024-01-01' WHERE id = 350,0
+SELECT * FROM suppliers WHERE amount = 'client01' OR '1'='1',1
+"SELECT * FROM clients WHERE age='pending' UNION SELECT username, password FROM clients --",1
+SELECT * FROM invoices WHERE username = '1' OR '1'='1' --,1
+SELECT * FROM categories ORDER BY created_at DESC LIMIT 178,0
+SELECT * FROM articles WHERE description = 'alice' OR '1'='1',1
+SELECT * FROM suppliers WHERE id = 259 OR 1=1,1
+SELECT * FROM employees LIMIT 426 OFFSET 213,0
+SELECT * FROM transactions LIMIT 145 OFFSET 72,0
+'; DELETE FROM suppliers WHERE 1=1; --,1
+SELECT * FROM invoices WHERE username='test' OR 1=1#,1
+SELECT * FROM students LIMIT 215 OFFSET 107,0
+DELETE FROM students WHERE id = 391,0
+SELECT * FROM payments WHERE username='john' OR '1'='1',1
+SELECT description FROM students GROUP BY description,0
+"SELECT * FROM students WHERE id='pending' UNION SELECT username, password FROM students --",1
+ALTER TABLE transactions ADD COLUMN age VARCHAR(255),0
+SELECT age FROM articles GROUP BY age,0
+SELECT * FROM orders WHERE amount IS NOT NULL,0
+SELECT * FROM payments WHERE phone = 'john',0
+SELECT * FROM students WHERE username = 'admin' AND password = '' OR ''='',1
+SELECT * FROM comments WHERE stock = '' OR ''=',1
+SELECT * FROM sessions WHERE phone BETWEEN 20 AND 70,0
+SELECT * FROM articles WHERE status BETWEEN 53 AND 103,0
+SELECT * FROM logs WHERE category='999' OR 1=1 --,1
+SELECT * FROM articles WHERE category IS NOT NULL,0
+SELECT * FROM products WHERE username = '2024-01-01' OR '1'='1' --,1
+SELECT DISTINCT age FROM categories,0
+"' UNION SELECT username, password FROM orders --",1
+SELECT DISTINCT password FROM transactions,0
+ALTER TABLE accounts ADD COLUMN age VARCHAR(255),0
+SELECT * FROM employees WHERE username='test' OR '1'='1',1
+"' AND 1=0 UNION SELECT phone, NULL FROM articles --",1
+' WAITFOR DELAY '0:0:5' --,1
+ALTER TABLE orders ADD COLUMN price VARCHAR(255),0
+ALTER TABLE transactions ADD COLUMN email VARCHAR(255),0
+SELECT AVG(role) FROM employees,0
+SELECT AVG(address) FROM logs,0
+1; DROP TABLE orders,1
+SELECT * FROM accounts WHERE status LIKE '%active%',0
+SELECT * FROM clients WHERE username = 'john' OR '1'='1' --,1
+SELECT * FROM suppliers WHERE username = '999' OR '1'='1' --,1
+SELECT * FROM clients WHERE role IS NOT NULL,0
+'; DELETE FROM accounts WHERE 1=1; --,1
+"SELECT * FROM products WHERE id IN (136, 137, 138)",0
+SELECT * FROM orders WHERE price='active' OR 1=1 --,1
+ALTER TABLE employees ADD COLUMN id VARCHAR(255),0
+"SELECT * FROM payments WHERE age='active' UNION SELECT username, password FROM payments --",1
+SELECT * FROM orders WHERE username='100' OR 1=1#,1
+"SELECT status, amount FROM accounts",0
+SELECT * FROM clients WHERE login='alice' AND password='' OR '1'='1',1
+"SELECT status, address FROM suppliers",0
+SELECT * FROM logs WHERE stock = 'client01' OR '1'='1',1
+SELECT DISTINCT password FROM suppliers,0
+SELECT * FROM orders WHERE username='alice' OR 1=1#,1
+SELECT DISTINCT created_at FROM categories,0
+SELECT * FROM logs WHERE id=294 OR '1'='1' --,1
+SELECT * FROM orders WHERE username = '10' AND password = '' OR ''='',1
+SELECT * FROM suppliers WHERE description = '' OR ''=',1
+SELECT COUNT(*) FROM orders,0
+"' AND SUBSTRING((SELECT address FROM invoices LIMIT 1),1,1)='a",1
+"' AND 1=0 UNION SELECT username, NULL FROM articles --",1
+SELECT * FROM suppliers a JOIN articles b ON a.id = b.suppliers_id,0
+DELETE FROM articles WHERE id = 127,0
+SELECT * FROM categories WHERE stock LIKE '%admin%',0
+SELECT * FROM suppliers a JOIN sessions b ON a.id = b.suppliers_id,0
+SELECT * FROM suppliers WHERE username='test' OR '1'='1',1
+"' AND SUBSTRING((SELECT created_at FROM logs LIMIT 1),1,1)='a",1
+SELECT * FROM invoices WHERE id = 266 OR 1=1,1
+"SELECT * FROM employees WHERE id IN (311, 312, 313)",0
+DELETE FROM invoices WHERE id = 86,0
+'; DELETE FROM invoices WHERE 1=1; --,1
+'; DROP TABLE categories; --,1
+SELECT * FROM products WHERE name='2024-01-01' OR 1=1 --,1
+SELECT * FROM logs WHERE id = 173 OR 1=1,1
+'; DROP TABLE employees; --,1
+' OR 1=1; SELECT * FROM users; --,1
+SELECT * FROM categories WHERE stock = '10' OR '1'='1',1
+SELECT AVG(id) FROM articles,0
+SELECT AVG(age) FROM employees,0
+"INSERT INTO articles (role, name) VALUES ('john', '1')",0
+"INSERT INTO accounts (email, age) VALUES ('2024-01-01', '1')",0
+DELETE FROM transactions WHERE id = 60,0
+SELECT * FROM accounts WHERE username = 'client01' OR '1'='1' --,1
+"INSERT INTO transactions (created_at, category) VALUES ('paris', '1')",0
+SELECT * FROM transactions WHERE category = '100',0
+SELECT age FROM suppliers GROUP BY age,0
+SELECT * FROM logs WHERE login='admin' AND password='' OR '1'='1',1
+SELECT * FROM articles WHERE id = 241,0
+DELETE FROM comments WHERE id = 81,0
+SELECT * FROM users WHERE password = 'john' OR '1'='1',1
+SELECT * FROM accounts WHERE password = 418 AND category = 'active',0
+SELECT * FROM articles WHERE category = 'admin',0
+"SELECT * FROM students WHERE email='admin' UNION SELECT username, password FROM students --",1
+SELECT * FROM products WHERE id = 56,0
+ALTER TABLE accounts ADD COLUMN username VARCHAR(255),0
+SELECT * FROM sessions LIMIT 487 OFFSET 243,0
+SELECT * FROM sessions WHERE username = '50.5' AND password = '' OR ''='',1
+SELECT * FROM orders WHERE age BETWEEN 359 AND 409,0
+SELECT * FROM invoices WHERE created_at BETWEEN 158 AND 208,0
+SELECT role FROM sessions GROUP BY role,0
+"SELECT description, email FROM employees",0
+ALTER TABLE accounts ADD COLUMN stock VARCHAR(255),0
+SELECT * FROM clients a JOIN students b ON a.id = b.clients_id,0
+SELECT COUNT(*) FROM students,0
+SELECT * FROM clients WHERE email LIKE '%alice%',0
+SELECT * FROM comments WHERE username = '1' AND password = '' OR ''='',1
+SELECT * FROM employees WHERE name='999' OR 1=1 --,1
+SELECT * FROM categories WHERE category='client01' OR 1=1 --,1
+SELECT DISTINCT id FROM invoices,0
+SELECT * FROM employees WHERE id=336 OR '1'='1' --,1
+' OR EXISTS(SELECT * FROM accounts) --,1
+SELECT * FROM articles LIMIT 110 OFFSET 55,0
+"SELECT amount, role FROM suppliers",0
+SELECT AVG(phone) FROM articles,0
+SELECT * FROM payments ORDER BY created_at DESC LIMIT 109,0
+"SELECT password, email FROM transactions",0
+"' UNION SELECT NULL, NULL, NULL --",1
+SELECT * FROM comments WHERE username = 'client01' OR '1'='1' --,1
+SELECT * FROM transactions WHERE login='client01' AND password='' OR '1'='1',1
+SELECT * FROM articles a JOIN users b ON a.id = b.articles_id,0
+SELECT * FROM accounts WHERE created_at > '2023-01-01',0
+1; DROP TABLE articles,1
+UPDATE suppliers SET stock = '100' WHERE id = 389,0
+"' AND SUBSTRING((SELECT status FROM sessions LIMIT 1),1,1)='a",1
+SELECT * FROM sessions WHERE email = 'john',0
+"' UNION SELECT username, password FROM students --",1
+SELECT * FROM logs WHERE address BETWEEN 23 AND 73,0
+SELECT DISTINCT phone FROM categories,0
+SELECT * FROM sessions WHERE id = 429 AND category = 'paris',0
+SELECT * FROM categories WHERE id=488 OR '1'='1' --,1
+SELECT * FROM users WHERE phone = '' OR ''=',1
+SELECT * FROM employees WHERE phone LIKE '%50.5%',0
+SELECT * FROM articles WHERE id = 187 OR 1=1,1
+SELECT * FROM articles WHERE username='2024-01-01' OR '1'='1',1
+SELECT * FROM logs WHERE username IS NOT NULL,0
+UPDATE students SET category = '10' WHERE id = 352,0
+SELECT * FROM transactions WHERE status = '' OR ''=',1
+SELECT * FROM employees WHERE id = 71 OR 1=1,1
+SELECT * FROM categories ORDER BY description DESC LIMIT 283,0
+SELECT * FROM transactions WHERE amount BETWEEN 462 AND 512,0
+SELECT * FROM students WHERE stock LIKE '%1%',0
+UPDATE categories SET price = '2' WHERE id = 286,0
+SELECT * FROM invoices WHERE id = 317 OR 1=1,1
+SELECT * FROM students WHERE id = 370,0
+SELECT stock FROM sessions GROUP BY stock,0
+SELECT AVG(name) FROM students,0
+"SELECT * FROM comments WHERE id='pending' UNION SELECT username, password FROM comments --",1
+SELECT * FROM products WHERE username = '100' AND password = '' OR ''='',1
+SELECT * FROM articles WHERE login='100' AND password='' OR '1'='1',1
+' OR EXISTS(SELECT * FROM invoices) --,1
+SELECT DISTINCT amount FROM articles,0
+SELECT * FROM clients WHERE username = 'client01' AND password = '' OR ''='',1
+"' AND 1=0 UNION SELECT stock, NULL FROM payments --",1
+SELECT * FROM categories WHERE username='10' OR 1=1#,1
+SELECT * FROM accounts LIMIT 329 OFFSET 164,0
+SELECT * FROM transactions WHERE username='100' OR 1=1#,1
+SELECT * FROM orders WHERE id = 342 OR 1=1,1
+1; DROP TABLE users,1
+SELECT * FROM logs WHERE description BETWEEN 294 AND 344,0
+SELECT DISTINCT status FROM clients,0
+SELECT * FROM articles WHERE username = '100' AND password = '' OR ''='',1
+"SELECT * FROM logs WHERE stock='test' UNION SELECT username, password FROM logs --",1
+SELECT * FROM sessions WHERE id = 258 OR 1=1,1
+SELECT * FROM employees WHERE id = 47,0
+SELECT * FROM comments WHERE id = 193 OR 1=1,1
+"SELECT * FROM products WHERE password='1' UNION SELECT username, password FROM products --",1
+SELECT * FROM products WHERE address LIKE '%test%',0
+SELECT * FROM orders ORDER BY role DESC LIMIT 444,0
+"INSERT INTO invoices (age, username) VALUES ('test', '1')",0
+"SELECT * FROM students WHERE username='100' UNION SELECT username, password FROM students --",1
+SELECT * FROM accounts WHERE id = 372 OR 1=1,1
+"SELECT * FROM employees WHERE amount='active' UNION SELECT username, password FROM employees --",1
+SELECT * FROM comments WHERE address = 27 AND name = '50.5',0
+1; DROP TABLE categories,1
+SELECT * FROM accounts WHERE name = 'test',0
+SELECT * FROM logs a JOIN comments b ON a.id = b.logs_id,0
+"' AND 1=0 UNION SELECT price, NULL FROM articles --",1
+"SELECT stock, created_at FROM orders",0
+SELECT * FROM clients WHERE status = '10' OR '1'='1',1
+admin' OR '1'='1,1
+SELECT AVG(category) FROM transactions,0
+SELECT * FROM accounts WHERE username='john' OR '1'='1',1
+SELECT * FROM students WHERE stock='10' OR 1=1 --,1
+"' AND 1=0 UNION SELECT category, NULL FROM categories --",1
+"' UNION SELECT username, password FROM invoices --",1
+SELECT AVG(price) FROM sessions,0
+SELECT * FROM sessions WHERE username = 'test',0
+DELETE FROM categories WHERE id = 123,0
+SELECT * FROM invoices WHERE username='100' OR '1'='1',1
+"SELECT * FROM clients WHERE category='john' UNION SELECT username, password FROM clients --",1
+"SELECT * FROM transactions WHERE age='100' UNION SELECT username, password FROM transactions --",1
+"SELECT * FROM payments WHERE role='pending' UNION SELECT username, password FROM payments --",1
+'; DELETE FROM articles WHERE 1=1; --,1
+SELECT * FROM users WHERE username='1' OR 1=1#,1
+"' AND 1=0 UNION SELECT created_at, NULL FROM sessions --",1
+"SELECT * FROM sessions WHERE id IN (339, 340, 341)",0
+SELECT * FROM products LIMIT 74 OFFSET 37,0
+SELECT * FROM sessions WHERE stock LIKE '%admin%',0
+SELECT * FROM comments WHERE password='test' OR 1=1 --,1
+SELECT * FROM products WHERE email BETWEEN 452 AND 502,0
+SELECT * FROM transactions WHERE email = '50.5',0
+DELETE FROM invoices WHERE id = 170,0
+SELECT * FROM logs LIMIT 288 OFFSET 144,0
+SELECT * FROM students WHERE amount='paris' OR 1=1 --,1
+UPDATE logs SET status = '1' WHERE id = 24,0
+SELECT name FROM categories GROUP BY name,0
+SELECT * FROM suppliers WHERE id = 406,0
+SELECT * FROM students WHERE username='50.5' OR 1=1#,1
+"SELECT description, price FROM invoices",0
+"SELECT description, price FROM clients",0
+SELECT * FROM students WHERE username = 'guest' AND password = '' OR ''='',1
+"INSERT INTO products (description, status) VALUES ('100', '1')",0
+"SELECT role, email FROM comments",0
+SELECT DISTINCT address FROM suppliers,0
+SELECT * FROM sessions a JOIN transactions b ON a.id = b.sessions_id,0
+SELECT * FROM suppliers a JOIN accounts b ON a.id = b.suppliers_id,0
+"INSERT INTO accounts (created_at, address) VALUES ('2024-01-01', '1')",0
+SELECT * FROM orders WHERE username='pending' OR 1=1#,1
+SELECT * FROM transactions ORDER BY status DESC LIMIT 183,0
+SELECT * FROM students WHERE username='pending' OR 1=1 --,1
+SELECT * FROM invoices WHERE stock = '100',0
+DELETE FROM articles WHERE id = 381,0
+SELECT * FROM payments WHERE created_at > '2023-01-01',0
+"SELECT created_at, id FROM users",0
+"' UNION SELECT username, password FROM suppliers --",1
+DELETE FROM clients WHERE id = 45,0
+SELECT DISTINCT stock FROM employees,0
+"SELECT * FROM employees WHERE password='pending' UNION SELECT username, password FROM employees --",1
+SELECT * FROM clients WHERE created_at = 'active',0
+SELECT * FROM employees WHERE name = '' OR ''=',1
+UPDATE suppliers SET username = 'guest' WHERE id = 495,0
+SELECT * FROM articles WHERE name BETWEEN 122 AND 172,0
+'; DROP TABLE orders; --,1
+"' AND SUBSTRING((SELECT name FROM transactions LIMIT 1),1,1)='a",1
+SELECT * FROM sessions WHERE description='guest' OR 1=1 --,1
+SELECT * FROM sessions WHERE username='pending' OR 1=1#,1
+SELECT * FROM employees WHERE age = '' OR ''=',1
+"' AND 1=0 UNION SELECT role, NULL FROM users --",1
+SELECT * FROM suppliers WHERE id = 286 OR 1=1,1
+SELECT * FROM comments WHERE id = 323 OR 1=1,1
+SELECT * FROM suppliers WHERE login='pending' AND password='' OR '1'='1',1
+1; DROP TABLE comments,1
+SELECT * FROM logs WHERE login='2' AND password='' OR '1'='1',1
+SELECT * FROM products WHERE username='10' OR '1'='1',1
+SELECT * FROM orders WHERE age IS NOT NULL,0
+"SELECT id, price FROM employees",0
+"SELECT username, id FROM suppliers",0
+'; DELETE FROM orders WHERE 1=1; --,1
+SELECT DISTINCT role FROM sessions,0
+SELECT * FROM articles WHERE username='guest' OR '1'='1',1
+"SELECT stock, phone FROM suppliers",0
+SELECT DISTINCT role FROM categories,0
+SELECT * FROM logs WHERE email IS NOT NULL,0
+"SELECT * FROM sessions WHERE name='100' UNION SELECT username, password FROM sessions --",1
+"' AND SUBSTRING((SELECT email FROM students LIMIT 1),1,1)='a",1
+SELECT * FROM orders WHERE name = 'test' OR '1'='1',1
+SELECT AVG(price) FROM transactions,0
+'; DELETE FROM employees WHERE 1=1; --,1
+SELECT * FROM comments WHERE id=483 OR '1'='1' --,1
+' OR (SELECT COUNT(*) FROM students) > 0 --,1
+SELECT * FROM orders WHERE category = 136 AND id = 'client01',0
+SELECT DISTINCT username FROM suppliers,0
+' OR (SELECT COUNT(*) FROM transactions) > 0 --,1
+SELECT * FROM orders WHERE username = '2024-01-01' OR '1'='1' --,1
+SELECT * FROM invoices WHERE stock='999' OR 1=1 --,1
+SELECT * FROM categories WHERE id = 208,0
+"SELECT * FROM products WHERE email='alice' UNION SELECT username, password FROM products --",1
+SELECT * FROM users WHERE username = 'john' OR '1'='1' --,1
+SELECT * FROM users WHERE email = 'john',0
+SELECT * FROM invoices WHERE id='2' OR 1=1 --,1
+SELECT * FROM suppliers a JOIN suppliers b ON a.id = b.suppliers_id,0
+SELECT DISTINCT id FROM suppliers,0
+ALTER TABLE suppliers ADD COLUMN password VARCHAR(255),0
+SELECT * FROM orders WHERE category BETWEEN 476 AND 526,0
+SELECT * FROM orders WHERE username = '2' AND password = '' OR ''='',1
+"' AND 1=0 UNION SELECT description, NULL FROM transactions --",1
+SELECT * FROM accounts ORDER BY description DESC LIMIT 71,0
+SELECT * FROM categories WHERE id=339 OR '1'='1' --,1
+SELECT * FROM accounts LIMIT 254 OFFSET 127,0
+"SELECT category, category FROM categories",0
+1; DROP TABLE employees,1
+"SELECT * FROM users WHERE phone='pending' UNION SELECT username, password FROM users --",1
+SELECT * FROM employees WHERE address IS NOT NULL,0
+"SELECT email, created_at FROM accounts",0
+SELECT * FROM payments WHERE login='2' AND password='' OR '1'='1',1
+SELECT * FROM orders WHERE username = '10' OR '1'='1' --,1
+SELECT * FROM logs WHERE id = 289 OR 1=1,1
+SELECT name FROM students GROUP BY name,0
+SELECT DISTINCT stock FROM transactions,0
+SELECT * FROM logs WHERE id=435 OR '1'='1' --,1
+'; DROP TABLE invoices; --,1
+SELECT * FROM logs WHERE id=114 OR '1'='1' --,1
+SELECT * FROM sessions WHERE phone = '' OR ''=',1
+SELECT * FROM accounts WHERE username='10' OR '1'='1',1
+SELECT * FROM products WHERE username BETWEEN 149 AND 199,0
+SELECT * FROM products WHERE stock = '10' OR '1'='1',1
+SELECT * FROM accounts WHERE description = '100' OR '1'='1',1
+SELECT * FROM sessions WHERE description = '' OR ''=',1
+SELECT * FROM logs WHERE login='active' AND password='' OR '1'='1',1
+SELECT * FROM categories WHERE role = 'client01',0
+SELECT * FROM payments WHERE amount = 'active',0
+SELECT * FROM users WHERE password = '999',0
+SELECT * FROM logs WHERE status = 'john',0
+SELECT DISTINCT username FROM sessions,0
+SELECT * FROM suppliers WHERE id = 7,0
+SELECT * FROM invoices WHERE amount BETWEEN 354 AND 404,0
+SELECT * FROM logs WHERE username='2024-01-01' OR 1=1#,1
+SELECT * FROM products WHERE description LIKE '%999%',0
+' OR (SELECT COUNT(*) FROM sessions) > 0 --,1
+SELECT * FROM accounts WHERE amount IS NOT NULL,0
+UPDATE comments SET price = '1' WHERE id = 117,0
+"' AND 1=0 UNION SELECT status, NULL FROM accounts --",1
+SELECT * FROM products WHERE username = 'guest' OR '1'='1' --,1
+' OR 1=1; SELECT * FROM students; --,1
+SELECT * FROM employees WHERE username = 'admin' AND password = '' OR ''='',1
+DELETE FROM products WHERE id = 195,0
+SELECT * FROM users LIMIT 467 OFFSET 233,0
+"SELECT * FROM transactions WHERE password='admin' UNION SELECT username, password FROM transactions --",1
+SELECT * FROM logs WHERE username = '100' OR '1'='1' --,1
+SELECT * FROM orders WHERE created_at > '2023-01-01',0
+SELECT COUNT(*) FROM categories,0
+SELECT * FROM accounts WHERE username='alice' OR 1=1#,1
+SELECT * FROM products WHERE username = 'john' OR '1'='1' --,1
+SELECT * FROM users a JOIN clients b ON a.id = b.users_id,0
+SELECT * FROM articles WHERE id = 266,0
+"' AND 1=0 UNION SELECT id, NULL FROM payments --",1
+SELECT * FROM articles WHERE id = 200,0
+"SELECT * FROM logs WHERE id IN (187, 188, 189)",0
+' OR '1'='1' LIMIT 1 --,1
+SELECT * FROM suppliers WHERE username = '50.5' AND password = '' OR ''='',1
+"' UNION SELECT username, password FROM products --",1
+SELECT * FROM products WHERE price = '50.5' OR '1'='1',1
+"SELECT email, address FROM products",0
+SELECT * FROM clients WHERE id = 53 OR 1=1,1
+SELECT * FROM suppliers WHERE address = 158 AND description = 'pending',0
+SELECT * FROM logs WHERE username BETWEEN 486 AND 536,0
+SELECT * FROM comments WHERE address BETWEEN 173 AND 223,0
+ALTER TABLE comments ADD COLUMN amount VARCHAR(255),0
+SELECT * FROM students ORDER BY email DESC LIMIT 356,0
+SELECT * FROM products WHERE price = 'admin',0
+SELECT * FROM products WHERE username = '50.5' OR '1'='1' --,1
+SELECT * FROM transactions WHERE username = 'client01' OR '1'='1' --,1
+SELECT * FROM clients WHERE id = 121,0
+SELECT * FROM orders WHERE id = 235,0
+SELECT * FROM products WHERE id=85 OR '1'='1' --,1
+1; DROP TABLE clients,1
+SELECT COUNT(*) FROM clients,0
+SELECT DISTINCT age FROM products,0
+SELECT * FROM transactions WHERE address IS NOT NULL,0
+SELECT * FROM articles WHERE login='1' AND password='' OR '1'='1',1
+UPDATE categories SET price = 'guest' WHERE id = 133,0
+DELETE FROM articles WHERE id = 161,0
+' OR (SELECT COUNT(*) FROM logs) > 0 --,1
+"' AND 1=0 UNION SELECT address, NULL FROM comments --",1
+SELECT * FROM clients ORDER BY status DESC LIMIT 393,0
+' OR EXISTS(SELECT * FROM payments) --,1
+UPDATE users SET status = '1' WHERE id = 321,0
+SELECT * FROM students WHERE status = 'admin',0
+SELECT * FROM logs WHERE created_at='pending' OR 1=1 --,1
+SELECT * FROM orders WHERE username='2024-01-01' OR 1=1 --,1
+"SELECT * FROM users WHERE id IN (358, 359, 360)",0
+"SELECT created_at, address FROM employees",0
+SELECT * FROM users ORDER BY stock DESC LIMIT 322,0
+SELECT * FROM logs WHERE username='paris' OR 1=1#,1
+SELECT * FROM transactions WHERE created_at LIKE '%test%',0
+SELECT * FROM students ORDER BY phone DESC LIMIT 71,0
+SELECT * FROM orders WHERE role LIKE '%active%',0
+SELECT * FROM logs WHERE status LIKE '%50.5%',0
+"' AND 1=0 UNION SELECT description, NULL FROM products --",1
+SELECT * FROM suppliers WHERE description = '1',0
+DELETE FROM users WHERE id = 192,0
+SELECT * FROM clients WHERE phone = 252 AND name = 'paris',0
+' or 1=1 -- -,1
+SELECT * FROM products WHERE username = '999' OR '1'='1' --,1
+"SELECT * FROM accounts WHERE password='10' UNION SELECT username, password FROM accounts --",1
+DELETE FROM clients WHERE id = 55,0
+SELECT * FROM orders WHERE description IS NOT NULL,0
+SELECT DISTINCT amount FROM users,0
+'; DROP TABLE users; --,1
+SELECT * FROM accounts WHERE username = '100' OR '1'='1' --,1
+SELECT category FROM products GROUP BY category,0
+SELECT * FROM articles WHERE username='client01' OR 1=1#,1
+"' AND 1=0 UNION SELECT email, NULL FROM accounts --",1
+"SELECT * FROM employees WHERE id IN (460, 461, 462)",0
+SELECT * FROM transactions WHERE created_at > '2023-01-01',0
+SELECT * FROM suppliers WHERE id=112 OR '1'='1' --,1
+SELECT * FROM comments ORDER BY description DESC LIMIT 257,0
+SELECT * FROM students WHERE id = 63,0
+SELECT * FROM users WHERE address = 'john',0
+"SELECT * FROM students WHERE id IN (35, 36, 37)",0
+' OR (SELECT COUNT(*) FROM employees) > 0 --,1
+SELECT * FROM users WHERE password='john' OR 1=1 --,1
+"SELECT * FROM employees WHERE created_at='999' UNION SELECT username, password FROM employees --",1
+ALTER TABLE suppliers ADD COLUMN username VARCHAR(255),0
+'; DELETE FROM logs WHERE 1=1; --,1
+' OR (SELECT COUNT(*) FROM articles) > 0 --,1
+"SELECT * FROM orders WHERE stock='alice' UNION SELECT username, password FROM orders --",1
+SELECT address FROM users GROUP BY address,0
+SELECT * FROM articles WHERE id = 391 OR 1=1,1
+SELECT * FROM sessions WHERE username='client01' OR 1=1#,1
+SELECT * FROM invoices WHERE username IS NOT NULL,0
+"' AND 1=0 UNION SELECT stock, NULL FROM categories --",1
+SELECT AVG(status) FROM categories,0
+SELECT * FROM clients ORDER BY price DESC LIMIT 363,0
+"' AND 1=0 UNION SELECT description, NULL FROM logs --",1
+SELECT * FROM employees WHERE id=490 OR '1'='1' --,1
+SELECT * FROM orders WHERE price = '' OR ''=',1
+SELECT * FROM articles WHERE id = 225,0
+SELECT * FROM employees WHERE phone BETWEEN 316 AND 366,0
+SELECT * FROM categories WHERE category='admin' OR 1=1 --,1
+SELECT * FROM comments WHERE username='john' OR '1'='1',1
+"' AND SUBSTRING((SELECT username FROM logs LIMIT 1),1,1)='a",1
+SELECT * FROM payments WHERE id=58 OR '1'='1' --,1
+SELECT * FROM invoices WHERE id = 383 OR 1=1,1
+' OR (SELECT COUNT(*) FROM payments) > 0 --,1
+"' AND 1=0 UNION SELECT password, NULL FROM invoices --",1
+"' AND SUBSTRING((SELECT amount FROM invoices LIMIT 1),1,1)='a",1
+SELECT * FROM students ORDER BY address DESC LIMIT 316,0
+SELECT * FROM clients WHERE category='admin' OR 1=1 --,1
+SELECT * FROM users WHERE address='999' OR 1=1 --,1
+SELECT * FROM comments WHERE login='50.5' AND password='' OR '1'='1',1
+SELECT * FROM students WHERE description='50.5' OR 1=1 --,1
+' OR 1=1; SELECT * FROM categories; --,1
+SELECT * FROM payments WHERE username='999' OR '1'='1',1
+SELECT * FROM payments WHERE username = '999' OR '1'='1' --,1
+SELECT * FROM categories WHERE username = 'alice' AND password = '' OR ''='',1
+SELECT * FROM transactions WHERE id = 481 OR 1=1,1
+SELECT * FROM orders WHERE username = '999' OR '1'='1' --,1
+UPDATE suppliers SET status = 'test' WHERE id = 157,0
+SELECT * FROM logs WHERE name IS NOT NULL,0
+SELECT * FROM articles WHERE created_at > '2023-01-01',0
+"SELECT * FROM comments WHERE created_at='pending' UNION SELECT username, password FROM comments --",1
+SELECT * FROM sessions WHERE password='1' OR 1=1 --,1
+SELECT * FROM sessions a JOIN users b ON a.id = b.sessions_id,0
+SELECT * FROM orders WHERE id=35 OR '1'='1' --,1
+SELECT AVG(name) FROM payments,0
+SELECT * FROM invoices WHERE price = 306 AND phone = 'guest',0
+SELECT * FROM products WHERE role IS NOT NULL,0
+SELECT * FROM sessions WHERE username='active' OR '1'='1',1
+SELECT COUNT(*) FROM accounts,0
+SELECT * FROM comments WHERE id = 146,0
+SELECT AVG(stock) FROM payments,0
+SELECT DISTINCT email FROM categories,0
+UPDATE invoices SET category = '10' WHERE id = 420,0
+'; DELETE FROM categories WHERE 1=1; --,1
+SELECT * FROM sessions ORDER BY stock DESC LIMIT 8,0
+SELECT * FROM sessions WHERE name = 462 AND created_at = '2024-01-01',0
+SELECT * FROM employees WHERE username IS NOT NULL,0
+SELECT * FROM orders WHERE name = '' OR ''=',1
+SELECT * FROM transactions WHERE id=378 OR '1'='1' --,1
+SELECT AVG(status) FROM students,0
+SELECT * FROM students WHERE login='client01' AND password='' OR '1'='1',1
+"SELECT * FROM comments WHERE id IN (364, 365, 366)",0
+UPDATE orders SET password = 'test' WHERE id = 405,0
+SELECT * FROM products a JOIN logs b ON a.id = b.products_id,0
+SELECT DISTINCT description FROM payments,0
+SELECT * FROM transactions WHERE stock='john' OR 1=1 --,1
+SELECT * FROM comments WHERE phone = 'alice',0
+SELECT * FROM clients WHERE stock LIKE '%100%',0
+SELECT * FROM products LIMIT 292 OFFSET 146,0
+"' AND 1=0 UNION SELECT price, NULL FROM orders --",1
+SELECT * FROM sessions WHERE role='test' OR 1=1 --,1
+SELECT * FROM accounts a JOIN sessions b ON a.id = b.accounts_id,0
+' OR 1=1; SELECT * FROM articles; --,1
+' OR 1=1; SELECT * FROM clients; --,1
+DELETE FROM sessions WHERE id = 60,0
+1; DROP TABLE logs,1
+SELECT AVG(id) FROM employees,0
+"' UNION SELECT username, password FROM sessions --",1
+"SELECT status, name FROM clients",0
+SELECT * FROM students WHERE username = 'admin' OR '1'='1',1
+SELECT * FROM accounts ORDER BY address DESC LIMIT 53,0
+ALTER TABLE invoices ADD COLUMN phone VARCHAR(255),0
+SELECT * FROM products WHERE id=478 OR '1'='1' --,1
+SELECT * FROM orders WHERE description LIKE '%2024-01-01%',0
+SELECT * FROM products WHERE id = 28 OR 1=1,1
+"INSERT INTO transactions (amount, created_at) VALUES ('100', '1')",0
+SELECT * FROM comments WHERE login='alice' AND password='' OR '1'='1',1
+SELECT * FROM invoices WHERE amount = '2024-01-01',0
+SELECT * FROM articles ORDER BY created_at DESC LIMIT 87,0
+SELECT AVG(address) FROM employees,0
+"UNION SELECT username,password FROM users",1
+SELECT * FROM payments WHERE stock = 234 AND password = '999',0
+SELECT * FROM categories WHERE login='guest' AND password='' OR '1'='1',1
+"SELECT * FROM articles WHERE id IN (383, 384, 385)",0
+DELETE FROM comments WHERE id = 204,0
+SELECT * FROM categories WHERE role = 291 AND password = 'john',0
+SELECT name FROM products GROUP BY name,0
+SELECT * FROM payments WHERE username = '100' OR '1'='1' --,1
+SELECT * FROM payments WHERE email BETWEEN 437 AND 487,0
+SELECT * FROM users WHERE address IS NOT NULL,0
+SELECT * FROM comments WHERE age='pending' OR 1=1 --,1
+SELECT * FROM students WHERE username='john' OR '1'='1',1
+"' AND SUBSTRING((SELECT address FROM products LIMIT 1),1,1)='a",1
+SELECT * FROM categories WHERE id = 274,0
+"' AND 1=0 UNION SELECT price, NULL FROM invoices --",1
+admin' --,1
+SELECT * FROM categories WHERE username='pending' OR '1'='1',1
+"SELECT * FROM invoices WHERE id IN (488, 489, 490)",0
+"' AND 1=0 UNION SELECT stock, NULL FROM comments --",1
+SELECT price FROM logs GROUP BY price,0
+SELECT DISTINCT name FROM payments,0
+"SELECT * FROM payments WHERE id IN (324, 325, 326)",0
+SELECT * FROM comments WHERE username='999' OR 1=1#,1
+DELETE FROM transactions WHERE id = 232,0
+SELECT * FROM orders WHERE id=156 OR '1'='1' --,1
+' OR (SELECT COUNT(*) FROM users) > 0 --,1
+SELECT * FROM users WHERE phone = 403 AND created_at = 'john',0
+"' AND 1=0 UNION SELECT email, NULL FROM users --",1
+SELECT * FROM clients WHERE id = 131,0
+SELECT * FROM transactions ORDER BY role DESC LIMIT 332,0
+"SELECT * FROM students WHERE stock='active' UNION SELECT username, password FROM students --",1
+SELECT * FROM students a JOIN employees b ON a.id = b.students_id,0
+SELECT * FROM students WHERE id=379 OR '1'='1' --,1
+"' AND SUBSTRING((SELECT id FROM articles LIMIT 1),1,1)='a",1
+SELECT COUNT(*) FROM logs,0
+SELECT * FROM employees WHERE password = 272 AND password = '10',0
+SELECT * FROM articles WHERE description = 258 AND name = 'john',0
+SELECT * FROM accounts WHERE id=82 OR '1'='1' --,1
+SELECT stock FROM employees GROUP BY stock,0
+SELECT * FROM products WHERE id = 262 OR 1=1,1
+SELECT * FROM accounts WHERE status LIKE '%999%',0
+SELECT description FROM comments GROUP BY description,0
+SELECT * FROM logs ORDER BY category DESC LIMIT 113,0
+SELECT * FROM users a JOIN sessions b ON a.id = b.users_id,0
+SELECT * FROM employees WHERE created_at > '2023-01-01',0
+'; DROP TABLE suppliers; --,1
+SELECT * FROM suppliers ORDER BY price DESC LIMIT 308,0
+DELETE FROM invoices WHERE id = 59,0
+SELECT * FROM students WHERE id = 'paris' OR '1'='1',1
+DELETE FROM products WHERE id = 494,0
+UPDATE transactions SET address = 'guest' WHERE id = 228,0
+SELECT AVG(status) FROM transactions,0
+SELECT * FROM users WHERE login='test' AND password='' OR '1'='1',1
+SELECT * FROM payments WHERE username='test' OR 1=1#,1
+UPDATE products SET id = 'john' WHERE id = 432,0
+SELECT * FROM clients WHERE description LIKE '%paris%',0
+DELETE FROM clients WHERE id = 125,0
+SELECT * FROM articles WHERE username = 'client01' AND password = '' OR ''='',1
+DELETE FROM students WHERE id = 198,0
+' OR 1=1; SELECT * FROM accounts; --,1
+SELECT AVG(id) FROM students,0
+SELECT * FROM logs WHERE username = 'paris' OR '1'='1' --,1
+SELECT address FROM invoices GROUP BY address,0
+ALTER TABLE clients ADD COLUMN stock VARCHAR(255),0
+"' AND SUBSTRING((SELECT stock FROM payments LIMIT 1),1,1)='a",1
+UPDATE orders SET password = 'client01' WHERE id = 393,0
+SELECT DISTINCT status FROM orders,0
+SELECT DISTINCT created_at FROM suppliers,0
+DELETE FROM suppliers WHERE id = 69,0
+SELECT * FROM transactions WHERE id = 150 OR 1=1,1
+SELECT * FROM comments WHERE description = '10',0
+SELECT username FROM accounts GROUP BY username,0
+UPDATE transactions SET password = '10' WHERE id = 485,0
+SELECT DISTINCT password FROM invoices,0
+' OR 1=1; SELECT * FROM comments; --,1
+SELECT * FROM articles LIMIT 13 OFFSET 6,0
+SELECT * FROM categories WHERE created_at IS NOT NULL,0
+"' UNION SELECT username, password FROM users --",1
+UPDATE products SET age = 'active' WHERE id = 357,0
+SELECT * FROM suppliers WHERE id = 47 OR 1=1,1
+UPDATE articles SET name = '10' WHERE id = 56,0
+SELECT * FROM students WHERE id = 438 OR 1=1,1
+SELECT * FROM sessions WHERE id=492 OR '1'='1' --,1
+"SELECT phone, price FROM products",0
+SELECT DISTINCT phone FROM accounts,0
+"SELECT * FROM products WHERE id IN (212, 213, 214)",0
+SELECT * FROM articles LIMIT 396 OFFSET 198,0
+1' OR '1'='1' --,1
+SELECT * FROM suppliers WHERE id = 93,0
+' OR (SELECT COUNT(*) FROM products) > 0 --,1
+"' UNION SELECT username, password FROM employees --",1
+'; DELETE FROM payments WHERE 1=1; --,1
+"SELECT * FROM payments WHERE id IN (461, 462, 463)",0
+'; EXEC xp_cmdshell('dir'); --,1
+SELECT AVG(stock) FROM sessions,0
+1; DROP TABLE suppliers,1
+'; DROP TABLE payments; --,1
+SELECT * FROM suppliers WHERE name LIKE '%john%',0
+"INSERT INTO sessions (age, description) VALUES ('pending', '1')",0
+SELECT COUNT(*) FROM users,0
+SELECT * FROM comments WHERE created_at > '2023-01-01',0
+SELECT * FROM payments WHERE amount = '' OR ''=',1
+SELECT * FROM students WHERE address = '' OR ''=',1
+' OR (SELECT COUNT(*) FROM orders) > 0 --,1
+UPDATE articles SET price = 'active' WHERE id = 332,0
+SELECT * FROM logs WHERE description = '10' OR '1'='1',1
+SELECT * FROM sessions WHERE id=250 OR '1'='1' --,1
+SELECT * FROM articles WHERE phone IS NOT NULL,0
+SELECT * FROM comments WHERE username='10' OR 1=1#,1
+DELETE FROM categories WHERE id = 271,0
+SELECT * FROM students WHERE id=118 OR '1'='1' --,1
+SELECT * FROM categories ORDER BY stock DESC LIMIT 259,0
+' OR 1=1; SELECT * FROM invoices; --,1
+SELECT AVG(id) FROM orders,0
+SELECT * FROM invoices WHERE id = 146 OR 1=1,1
+SELECT * FROM products WHERE price = 'guest' OR '1'='1',1
+SELECT * FROM logs WHERE username = 'john' OR '1'='1' --,1
+admin'/*,1
+SELECT * FROM payments ORDER BY id DESC LIMIT 481,0
+SELECT * FROM orders WHERE id = 411 OR 1=1,1
+ALTER TABLE users ADD COLUMN phone VARCHAR(255),0
+SELECT * FROM clients WHERE username = 'paris' OR '1'='1' --,1
+"SELECT * FROM users WHERE price='10' UNION SELECT username, password FROM users --",1
+SELECT * FROM clients WHERE id = 300 OR 1=1,1
+SELECT * FROM users WHERE status BETWEEN 57 AND 107,0
+SELECT * FROM accounts WHERE id='paris' OR 1=1 --,1
+"SELECT * FROM users WHERE role='1' UNION SELECT username, password FROM users --",1
+SELECT * FROM orders WHERE username = '50.5' AND password = '' OR ''='',1
+SELECT * FROM transactions WHERE stock = '1',0
+SELECT * FROM orders WHERE username = 'client01' AND password = '' OR ''='',1
+ALTER TABLE logs ADD COLUMN address VARCHAR(255),0
+"SELECT * FROM logs WHERE id IN (309, 310, 311)",0
+SELECT * FROM clients WHERE username = '999' AND password = '' OR ''='',1
+SELECT * FROM payments WHERE id = 413 OR 1=1,1
+SELECT * FROM logs WHERE id = 287 OR 1=1,1
+SELECT * FROM categories WHERE description = 302 AND age = 'test',0
+"SELECT * FROM suppliers WHERE id IN (181, 182, 183)",0
+SELECT * FROM transactions a JOIN invoices b ON a.id = b.transactions_id,0
+SELECT phone FROM students GROUP BY phone,0
+SELECT * FROM clients WHERE login='client01' AND password='' OR '1'='1',1
+SELECT * FROM products WHERE username='2' OR 1=1#,1
+SELECT password FROM transactions GROUP BY password,0
+SELECT DISTINCT phone FROM transactions,0
+SELECT * FROM payments WHERE id = 488 OR 1=1,1
+SELECT * FROM categories WHERE username='paris' OR 1=1 --,1
+SELECT * FROM users WHERE username='pending' OR '1'='1',1
+"' AND 1=0 UNION SELECT category, NULL FROM accounts --",1
+'; DROP TABLE clients; --,1
+"SELECT * FROM comments WHERE status='50.5' UNION SELECT username, password FROM comments --",1
+SELECT * FROM invoices WHERE password = 304 AND id = '50.5',0
+SELECT * FROM invoices WHERE id=147 OR '1'='1' --,1
+SELECT * FROM logs WHERE username = '2024-01-01' OR '1'='1' --,1
+SELECT * FROM articles WHERE id = 430 OR 1=1,1
+SELECT * FROM clients WHERE amount='50.5' OR 1=1 --,1
+SELECT * FROM employees WHERE username='active' OR 1=1#,1
+SELECT DISTINCT password FROM clients,0
+"SELECT * FROM clients WHERE id IN (258, 259, 260)",0
+SELECT * FROM employees WHERE description = '' OR ''=',1
+SELECT * FROM payments WHERE username='1' OR '1'='1',1
+SELECT * FROM comments WHERE username='test' OR '1'='1',1
+SELECT * FROM students WHERE username = 'alice' OR '1'='1' --,1
+' OR EXISTS(SELECT * FROM sessions) --,1
+SELECT * FROM clients LIMIT 462 OFFSET 231,0
+' OR (SELECT COUNT(*) FROM accounts) > 0 --,1
+SELECT * FROM payments WHERE id = 380 OR 1=1,1
+SELECT * FROM transactions WHERE age = '' OR ''=',1
+SELECT * FROM clients WHERE password = '' OR ''=',1
+"' AND 1=0 UNION SELECT status, NULL FROM invoices --",1
+"' AND SUBSTRING((SELECT price FROM users LIMIT 1),1,1)='a",1
+SELECT * FROM products WHERE name LIKE '%999%',0
+SELECT * FROM employees LIMIT 94 OFFSET 47,0
+"' AND 1=0 UNION SELECT age, NULL FROM comments --",1
+SELECT * FROM comments WHERE username = 'paris' AND password = '' OR ''='',1
+"INSERT INTO suppliers (created_at, address) VALUES ('active', '1')",0
+SELECT DISTINCT password FROM articles,0
+SELECT DISTINCT status FROM transactions,0
+"' AND SUBSTRING((SELECT age FROM clients LIMIT 1),1,1)='a",1
+SELECT * FROM orders LIMIT 86 OFFSET 43,0
+DELETE FROM students WHERE id = 93,0
+ALTER TABLE transactions ADD COLUMN id VARCHAR(255),0
+SELECT * FROM logs WHERE id = '100' OR '1'='1',1
+"' UNION SELECT username, password FROM clients --",1
+ALTER TABLE users ADD COLUMN stock VARCHAR(255),0
+SELECT * FROM logs WHERE username='john' OR 1=1#,1
+"' AND SUBSTRING((SELECT id FROM transactions LIMIT 1),1,1)='a",1
+' OR '1'='1,1
+SELECT * FROM suppliers WHERE status IS NOT NULL,0
+"' UNION SELECT table_name, NULL FROM information_schema.tables --",1
+ALTER TABLE clients ADD COLUMN age VARCHAR(255),0
+SELECT * FROM clients ORDER BY phone DESC LIMIT 301,0
+SELECT DISTINCT password FROM accounts,0
+"SELECT * FROM transactions WHERE id IN (71, 72, 73)",0
+DELETE FROM categories WHERE id = 141,0
+SELECT description FROM invoices GROUP BY description,0
+ALTER TABLE articles ADD COLUMN address VARCHAR(255),0
+SELECT * FROM employees WHERE username='paris' OR '1'='1',1
+UPDATE payments SET address = 'client01' WHERE id = 99,0
+SELECT COUNT(*) FROM employees,0
+SELECT AVG(name) FROM logs,0
+SELECT * FROM students LIMIT 229 OFFSET 114,0
+SELECT * FROM articles WHERE id=58 OR '1'='1' --,1
+SELECT * FROM accounts WHERE password = '' OR ''=',1
+SELECT * FROM comments WHERE username='paris' OR 1=1#,1
+SELECT * FROM clients WHERE id=44 OR '1'='1' --,1
+"SELECT password, description FROM logs",0
+SELECT * FROM logs WHERE id = 228 OR 1=1,1
+SELECT * FROM clients WHERE username='test' OR 1=1#,1
+SELECT * FROM suppliers WHERE login='paris' AND password='' OR '1'='1',1
+SELECT AVG(amount) FROM products,0
+SELECT * FROM clients WHERE stock = '' OR ''=',1
+SELECT * FROM orders LIMIT 102 OFFSET 51,0
+SELECT * FROM payments WHERE status BETWEEN 475 AND 525,0
+SELECT * FROM invoices WHERE username = '10',0
+UPDATE sessions SET id = 'test' WHERE id = 355,0
+DELETE FROM invoices WHERE id = 365,0
+SELECT * FROM products ORDER BY amount DESC LIMIT 171,0
+SELECT * FROM accounts WHERE username = 'pending' OR '1'='1' --,1
+SELECT * FROM comments WHERE login='1' AND password='' OR '1'='1',1
+' OR (SELECT COUNT(*) FROM categories) > 0 --,1
+SELECT * FROM comments WHERE phone = '' OR ''=',1
+SELECT * FROM logs WHERE status BETWEEN 320 AND 370,0
+SELECT role FROM logs GROUP BY role,0
+SELECT * FROM clients WHERE id = 76 OR 1=1,1
+SELECT * FROM products WHERE username = 'admin' OR '1'='1' --,1
+SELECT * FROM accounts WHERE username='admin' OR '1'='1',1
+"SELECT * FROM articles WHERE email='john' UNION SELECT username, password FROM articles --",1
+"INSERT INTO users (role, phone) VALUES ('pending', '1')",0
+SELECT * FROM employees WHERE age IS NOT NULL,0
+"SELECT role, password FROM users",0
+SELECT * FROM invoices WHERE id = 173 OR 1=1,1
+SELECT * FROM accounts WHERE category IS NOT NULL,0
+"SELECT * FROM invoices WHERE stock='active' UNION SELECT username, password FROM invoices --",1
+ALTER TABLE accounts ADD COLUMN email VARCHAR(255),0
+SELECT * FROM employees WHERE username = '2024-01-01' AND password = '' OR ''='',1
+SELECT * FROM logs WHERE created_at='test' OR 1=1 --,1
+"' AND 1=0 UNION SELECT id, NULL FROM suppliers --",1
+SELECT * FROM articles WHERE role = '' OR ''=',1
+SELECT * FROM products WHERE amount IS NOT NULL,0
+SELECT * FROM transactions WHERE amount LIKE '%john%',0
+' OR 1=1; SELECT * FROM employees; --,1
+SELECT * FROM students WHERE login='2' AND password='' OR '1'='1',1
+SELECT * FROM orders WHERE username = 'alice' OR '1'='1' --,1
+SELECT * FROM orders WHERE created_at IS NOT NULL,0
+SELECT DISTINCT email FROM orders,0
+' OR SLEEP(5) --,1
+SELECT * FROM users WHERE created_at > '2023-01-01',0
+"' UNION ALL SELECT NULL,NULL,version() --",1
+"' AND SUBSTRING((SELECT age FROM transactions LIMIT 1),1,1)='a",1
+"SELECT status, age FROM comments",0
+SELECT * FROM logs WHERE status = '' OR ''=',1
+SELECT * FROM suppliers WHERE created_at > '2023-01-01',0
+SELECT * FROM employees WHERE login='100' AND password='' OR '1'='1',1
+SELECT * FROM products WHERE id = 92 OR 1=1,1
+UPDATE comments SET price = 'active' WHERE id = 337,0
+SELECT * FROM accounts WHERE category = 189 AND created_at = 'guest',0
+SELECT * FROM suppliers WHERE username = 'alice' OR '1'='1',1
+"' AND SUBSTRING((SELECT age FROM logs LIMIT 1),1,1)='a",1
+SELECT * FROM articles WHERE id = 335,0
+SELECT * FROM employees WHERE username = '50.5' AND password = '' OR ''='',1
+UPDATE logs SET amount = '100' WHERE id = 498,0
+SELECT * FROM employees WHERE id=194 OR '1'='1' --,1
+SELECT * FROM products WHERE login='alice' AND password='' OR '1'='1',1
+SELECT * FROM comments WHERE username = 'john' OR '1'='1' --,1
+ALTER TABLE orders ADD COLUMN amount VARCHAR(255),0
+SELECT * FROM categories WHERE password = '' OR ''=',1
+SELECT * FROM employees WHERE status IS NOT NULL,0
+SELECT * FROM users WHERE password LIKE '%pending%',0
+DELETE FROM comments WHERE id = 344,0
+SELECT * FROM logs WHERE stock = '' OR ''=',1
+"SELECT status, created_at FROM logs",0
+"' AND 1=0 UNION SELECT email, NULL FROM categories --",1
+"SELECT id, password FROM invoices",0
+SELECT * FROM students WHERE id=413 OR '1'='1' --,1
+SELECT * FROM accounts WHERE username = '' OR ''=',1
+SELECT * FROM transactions WHERE status='john' OR 1=1 --,1
+SELECT * FROM clients WHERE id = 387,0
+SELECT * FROM suppliers WHERE username='2024-01-01' OR '1'='1',1
+SELECT * FROM categories WHERE created_at > '2023-01-01',0
+SELECT * FROM categories WHERE age = 153 AND stock = 'guest',0
+DELETE FROM users WHERE id = 103,0
+' OR EXISTS(SELECT * FROM logs) --,1
+SELECT * FROM orders WHERE username='client01' OR 1=1#,1
+SELECT * FROM payments WHERE username='pending' OR '1'='1',1
+SELECT * FROM logs LIMIT 81 OFFSET 40,0
+SELECT * FROM articles WHERE username = '1' OR '1'='1' --,1
+SELECT category FROM sessions GROUP BY category,0
+SELECT DISTINCT id FROM orders,0
+"SELECT * FROM students WHERE id IN (197, 198, 199)",0
+'; DROP TABLE comments; --,1
+' OR 1=1; SELECT * FROM sessions; --,1
+SELECT * FROM products WHERE username='50.5' OR 1=1#,1
+SELECT * FROM suppliers WHERE password='active' OR 1=1 --,1
+ALTER TABLE suppliers ADD COLUMN address VARCHAR(255),0
+DELETE FROM users WHERE id = 345,0
+"SELECT description, category FROM employees",0
+SELECT * FROM clients LIMIT 249 OFFSET 124,0
+' OR 1=1; SELECT * FROM orders; --,1
+SELECT description FROM orders GROUP BY description,0
+SELECT * FROM employees WHERE phone LIKE '%client01%',0
+SELECT * FROM accounts LIMIT 451 OFFSET 225,0
+SELECT * FROM accounts WHERE id = 66 OR 1=1,1
+SELECT * FROM sessions WHERE role LIKE '%paris%',0
+"SELECT * FROM payments WHERE id IN (203, 204, 205)",0
+SELECT * FROM employees WHERE username LIKE '%test%',0
+SELECT * FROM products WHERE username='test' OR 1=1#,1
+SELECT * FROM suppliers WHERE id = 314,0
+SELECT * FROM categories WHERE created_at LIKE '%alice%',0
+SELECT * FROM sessions WHERE created_at > '2023-01-01',0
+' OR EXISTS(SELECT * FROM employees) --,1
+SELECT * FROM categories WHERE id IS NOT NULL,0
+SELECT DISTINCT role FROM invoices,0
+1; DROP TABLE accounts,1
+SELECT * FROM transactions WHERE id=385 OR '1'='1' --,1
+'; DELETE FROM clients WHERE 1=1; --,1
+SELECT * FROM products,0
+"' AND SUBSTRING((SELECT password FROM orders LIMIT 1),1,1)='a",1
+SELECT phone FROM products GROUP BY phone,0
+SELECT * FROM invoices WHERE stock BETWEEN 409 AND 459,0
+ALTER TABLE accounts ADD COLUMN address VARCHAR(255),0
+SELECT role FROM articles GROUP BY role,0
+SELECT username FROM comments GROUP BY username,0
+' OR EXISTS(SELECT * FROM comments) --,1
+SELECT * FROM accounts a JOIN articles b ON a.id = b.accounts_id,0
+SELECT * FROM suppliers WHERE username = 'alice' OR '1'='1' --,1
+SELECT * FROM sessions WHERE name LIKE '%admin%',0
+SELECT email FROM payments GROUP BY email,0
+UPDATE transactions SET stock = 'client01' WHERE id = 395,0
+SELECT * FROM clients WHERE id = 490 OR 1=1,1
+SELECT * FROM suppliers WHERE status = '10' OR '1'='1',1
+SELECT * FROM orders LIMIT 262 OFFSET 131,0
+"' AND 1=0 UNION SELECT description, NULL FROM employees --",1
+SELECT * FROM transactions WHERE created_at BETWEEN 40 AND 90,0
+SELECT * FROM transactions WHERE username='50.5' OR '1'='1',1
+SELECT * FROM transactions WHERE username='admin' OR 1=1#,1
+SELECT * FROM orders WHERE username = '999' OR '1'='1',1
+SELECT * FROM invoices a JOIN students b ON a.id = b.invoices_id,0
+SELECT * FROM students WHERE amount='999' OR 1=1 --,1
+'; DROP TABLE articles; --,1
+SELECT * FROM payments WHERE login='1' AND password='' OR '1'='1',1
+"SELECT * FROM clients WHERE id IN (208, 209, 210)",0
+SELECT username FROM categories GROUP BY username,0
+"' AND 1=0 UNION SELECT name, NULL FROM payments --",1
+SELECT * FROM invoices WHERE created_at > '2023-01-01',0
+SELECT * FROM categories LIMIT 174 OFFSET 87,0
+"' AND SUBSTRING((SELECT category FROM accounts LIMIT 1),1,1)='a",1
+SELECT * FROM accounts WHERE login='guest' AND password='' OR '1'='1',1
+ALTER TABLE suppliers ADD COLUMN description VARCHAR(255),0
+SELECT * FROM clients WHERE category IS NOT NULL,0
+SELECT * FROM products WHERE created_at = 157 AND age = 'active',0
+SELECT * FROM transactions WHERE username='test' OR '1'='1',1
+"SELECT * FROM products WHERE id IN (239, 240, 241)",0
+"' AND 1=0 UNION SELECT age, NULL FROM sessions --",1
+SELECT * FROM accounts ORDER BY role DESC LIMIT 243,0
+SELECT * FROM products WHERE username='999' OR 1=1#,1
+SELECT * FROM suppliers WHERE age='test' OR 1=1 --,1
+"' UNION SELECT username, password FROM logs --",1
+DELETE FROM invoices WHERE id = 66,0
+SELECT * FROM comments WHERE id = 115,0
+SELECT * FROM payments WHERE username='1' OR 1=1#,1
+"SELECT * FROM transactions WHERE id IN (234, 235, 236)",0
+"' AND SUBSTRING((SELECT phone FROM suppliers LIMIT 1),1,1)='a",1
+SELECT * FROM sessions WHERE amount = 'guest' OR '1'='1',1
+SELECT * FROM accounts WHERE created_at BETWEEN 260 AND 310,0
+SELECT * FROM transactions a JOIN logs b ON a.id = b.transactions_id,0
+SELECT DISTINCT name FROM comments,0
+SELECT * FROM accounts ORDER BY status DESC LIMIT 169,0
+SELECT * FROM users WHERE amount LIKE '%alice%',0
+UPDATE products SET name = '10' WHERE id = 112,0
+SELECT * FROM articles WHERE status = 'paris' OR '1'='1',1
+SELECT * FROM payments WHERE description='100' OR 1=1 --,1
+' OR (SELECT COUNT(*) FROM clients) > 0 --,1
+SELECT * FROM accounts WHERE id = 338 OR 1=1,1
+' OR EXISTS(SELECT * FROM suppliers) --,1
+ALTER TABLE orders ADD COLUMN age VARCHAR(255),0
+UPDATE orders SET category = 'alice' WHERE id = 166,0
+"SELECT * FROM users WHERE created_at='999' UNION SELECT username, password FROM users --",1
+SELECT * FROM products WHERE login='50.5' AND password='' OR '1'='1',1
+SELECT * FROM products WHERE price = 'alice',0
+SELECT * FROM products LIMIT 449 OFFSET 224,0
+'; DELETE FROM users WHERE 1=1; --,1
+"' AND SUBSTRING((SELECT address FROM employees LIMIT 1),1,1)='a",1
+SELECT * FROM accounts WHERE password = 'alice' OR '1'='1',1
+SELECT phone FROM transactions GROUP BY phone,0
+SELECT * FROM accounts WHERE id = 156,0
+SELECT * FROM invoices WHERE description IS NOT NULL,0
+SELECT * FROM payments WHERE username='pending' OR 1=1#,1
+SELECT * FROM employees WHERE username='2024-01-01' OR '1'='1',1
+"' AND 1=0 UNION SELECT id, NULL FROM orders --",1
+SELECT * FROM invoices WHERE password LIKE '%pending%',0
+' OR 1=1 --,1
+SELECT * FROM users WHERE id=1,0
+SELECT AVG(address) FROM users,0
+"' AND SUBSTRING((SELECT address FROM users LIMIT 1),1,1)='a",1
+SELECT * FROM orders WHERE id = 440,0
+"INSERT INTO articles (id, price) VALUES ('2024-01-01', '1')",0
+SELECT * FROM categories WHERE username='guest' OR 1=1#,1
+SELECT * FROM transactions WHERE address = 'test' OR '1'='1',1
+SELECT DISTINCT stock FROM invoices,0
+"' AND SUBSTRING((SELECT email FROM suppliers LIMIT 1),1,1)='a",1
+"' UNION SELECT username, password FROM categories --",1
+SELECT COUNT(*) FROM comments,0
+UPDATE suppliers SET role = 'admin' WHERE id = 437,0
+"SELECT price, email FROM students",0
+SELECT * FROM categories WHERE id=364 OR '1'='1' --,1
+SELECT DISTINCT phone FROM comments,0
+"' UNION SELECT username, password FROM comments --",1
+"SELECT * FROM invoices WHERE role='2024-01-01' UNION SELECT username, password FROM invoices --",1
+SELECT * FROM products WHERE created_at > '2023-01-01',0
+SELECT * FROM products WHERE username='1' OR '1'='1',1
+SELECT * FROM accounts LIMIT 244 OFFSET 122,0
+SELECT * FROM products LIMIT 130 OFFSET 65,0
+SELECT * FROM employees ORDER BY amount DESC LIMIT 239,0
+SELECT * FROM invoices WHERE price = '2' OR '1'='1',1
+SELECT * FROM products WHERE id=7 OR '1'='1' --,1
+' OR username LIKE '%admin%' --,1
+"SELECT * FROM users WHERE password='john' UNION SELECT username, password FROM users --",1
+SELECT * FROM articles WHERE username='alice' OR 1=1#,1
+' OR EXISTS(SELECT * FROM articles) --,1
+DELETE FROM products WHERE id = 65,0
+SELECT * FROM suppliers LIMIT 199 OFFSET 99,0
+SELECT * FROM orders WHERE description = 263 AND stock = 'test',0
+SELECT * FROM suppliers WHERE created_at='2' OR 1=1 --,1
+' OR (SELECT COUNT(*) FROM comments) > 0 --,1
+SELECT * FROM articles WHERE username='999' OR '1'='1',1
+SELECT * FROM orders WHERE username = 'pending' AND password = '' OR ''='',1
+'; DELETE FROM products WHERE 1=1; --,1
+SELECT * FROM articles WHERE address BETWEEN 22 AND 72,0
+"' AND SUBSTRING((SELECT status FROM products LIMIT 1),1,1)='a",1
+SELECT AVG(created_at) FROM products,0
+SELECT * FROM clients WHERE status='50.5' OR 1=1 --,1
+SELECT * FROM transactions WHERE price = 'alice',0
+SELECT * FROM transactions WHERE phone = '' OR ''=',1
+SELECT * FROM comments WHERE username = 'paris' OR '1'='1',1
+SELECT * FROM products WHERE username = '' OR ''=',1
+SELECT * FROM orders WHERE username='admin' OR '1'='1',1
+"' AND SUBSTRING((SELECT role FROM comments LIMIT 1),1,1)='a",1
+SELECT * FROM comments a JOIN articles b ON a.id = b.comments_id,0
+SELECT * FROM transactions WHERE id = 372 OR 1=1,1
+SELECT * FROM articles WHERE age = '1' OR '1'='1',1
+SELECT * FROM accounts WHERE username = '10' OR '1'='1' --,1
+SELECT * FROM students WHERE category = 286 AND amount = '2',0
+SELECT * FROM logs a JOIN logs b ON a.id = b.logs_id,0
+SELECT * FROM employees WHERE status='john' OR 1=1 --,1
+SELECT AVG(role) FROM payments,0
+SELECT * FROM employees LIMIT 431 OFFSET 215,0
+"' AND 1=0 UNION SELECT address, NULL FROM clients --",1
+UPDATE comments SET name = 'paris' WHERE id = 372,0
+SELECT * FROM comments WHERE username = '1' OR '1'='1',1
+SELECT * FROM sessions WHERE price BETWEEN 256 AND 306,0
+"SELECT price, password FROM comments",0
+SELECT * FROM invoices WHERE login='1' AND password='' OR '1'='1',1
+SELECT * FROM invoices WHERE username BETWEEN 115 AND 165,0
+SELECT * FROM suppliers WHERE id = 495 OR 1=1,1
+SELECT * FROM sessions WHERE username = '2' OR '1'='1',1
+"' UNION SELECT username, password FROM articles --",1
+SELECT * FROM comments WHERE username = '50.5' OR '1'='1',1
+ALTER TABLE categories ADD COLUMN age VARCHAR(255),0
+' OR EXISTS(SELECT * FROM transactions) --,1
+SELECT AVG(stock) FROM products,0
+SELECT * FROM invoices WHERE id=324 OR '1'='1' --,1
+SELECT * FROM suppliers WHERE username = 'alice' AND password = '' OR ''='',1
+"INSERT INTO categories (name, email) VALUES ('admin', '1')",0
+"SELECT * FROM logs WHERE id IN (277, 278, 279)",0
+SELECT * FROM articles WHERE name='10' OR 1=1 --,1
+SELECT id FROM clients GROUP BY id,0
+SELECT * FROM orders WHERE category = '' OR ''=',1
+DELETE FROM logs WHERE id = 173,0
+SELECT * FROM students WHERE username = '50.5' AND password = '' OR ''='',1
+"' UNION SELECT username, password FROM transactions --",1
+SELECT * FROM invoices WHERE id=310 OR '1'='1' --,1
+SELECT * FROM categories WHERE email = '2024-01-01',0
+SELECT * FROM employees ORDER BY category DESC LIMIT 417,0
+1; DROP TABLE students,1
+SELECT * FROM accounts WHERE login='2024-01-01' AND password='' OR '1'='1',1
+SELECT * FROM accounts WHERE username = 'client01' AND password = '' OR ''='',1
+'; DELETE FROM transactions WHERE 1=1; --,1
+SELECT COUNT(*) FROM transactions,0
+ALTER TABLE articles ADD COLUMN amount VARCHAR(255),0
+"' AND SUBSTRING((SELECT role FROM articles LIMIT 1),1,1)='a",1
+SELECT * FROM comments WHERE email LIKE '%10%',0
+SELECT * FROM suppliers WHERE username = 'paris' OR '1'='1' --,1
+SELECT COUNT(*) FROM suppliers,0
+SELECT * FROM articles WHERE login='2024-01-01' AND password='' OR '1'='1',1
+SELECT * FROM products WHERE username = '2024-01-01' AND password = '' OR ''='',1
+'; DROP TABLE transactions; --,1
+SELECT * FROM products WHERE login='2' AND password='' OR '1'='1',1
+SELECT email FROM products GROUP BY email,0
+SELECT * FROM logs WHERE id = 126 OR 1=1,1
+SELECT * FROM logs WHERE amount = 'test',0
+"SELECT name, address FROM comments",0
+SELECT DISTINCT id FROM logs,0
+SELECT * FROM logs WHERE price LIKE '%alice%',0
+SELECT * FROM articles WHERE price='100' OR 1=1 --,1
+SELECT * FROM articles WHERE description = 'alice',0
+SELECT * FROM comments a JOIN employees b ON a.id = b.comments_id,0
+"' AND 1=0 UNION SELECT id, NULL FROM logs --",1
+' OR 1=1; SELECT * FROM transactions; --,1
+SELECT * FROM products WHERE id = 421,0
+SELECT * FROM invoices WHERE amount = '' OR ''=',1
+' OR 1=1; SELECT * FROM suppliers; --,1
+SELECT * FROM clients WHERE password = '50.5',0
+SELECT * FROM comments WHERE password LIKE '%active%',0
+SELECT * FROM orders WHERE username = '' OR ''=',1
+' OR 1=1; SELECT * FROM payments; --,1
+SELECT AVG(id) FROM sessions,0
+SELECT * FROM students ORDER BY id DESC LIMIT 152,0
+SELECT * FROM students WHERE login='999' AND password='' OR '1'='1',1
+SELECT DISTINCT password FROM students,0
+DELETE FROM products WHERE id = 124,0
+SELECT * FROM employees WHERE amount = '999' OR '1'='1',1
+SELECT * FROM suppliers WHERE username = '1' OR '1'='1' --,1
+SELECT * FROM payments WHERE role = 'alice' OR '1'='1',1
+SELECT * FROM sessions WHERE username = 'alice' AND password = '' OR ''='',1
+SELECT * FROM invoices WHERE id = 331 OR 1=1,1
+SELECT * FROM invoices WHERE age IS NOT NULL,0
+SELECT * FROM suppliers LIMIT 124 OFFSET 62,0
+'; DROP TABLE accounts; --,1
+SELECT * FROM students WHERE created_at IS NOT NULL,0
+' OR 1=1#,1
+SELECT * FROM comments WHERE id = 329 OR 1=1,1
+"SELECT username, address FROM sessions",0
+SELECT AVG(category) FROM students,0
+SELECT * FROM orders WHERE password IS NOT NULL,0
+DELETE FROM transactions WHERE id = 89,0
+"' AND SUBSTRING((SELECT role FROM sessions LIMIT 1),1,1)='a",1
+SELECT * FROM articles WHERE id = 41 OR 1=1,1
+DELETE FROM students WHERE id = 229,0
+SELECT * FROM comments WHERE amount IS NOT NULL,0
+SELECT * FROM transactions WHERE password = '' OR ''=',1
+SELECT * FROM orders a JOIN users b ON a.id = b.orders_id,0
+SELECT * FROM articles WHERE id=500 OR '1'='1' --,1
+"INSERT INTO categories (name, email) VALUES ('2024-01-01', '1')",0
+"' AND SUBSTRING((SELECT category FROM logs LIMIT 1),1,1)='a",1
+"SELECT status, role FROM employees",0
+SELECT * FROM accounts WHERE login='john' AND password='' OR '1'='1',1
+'; DROP TABLE products; --,1
+DELETE FROM products WHERE id = 152,0
+SELECT DISTINCT price FROM sessions,0
+SELECT * FROM suppliers WHERE username='10' OR '1'='1',1
+SELECT * FROM accounts WHERE username = 'alice' OR '1'='1' --,1
+ALTER TABLE categories ADD COLUMN description VARCHAR(255),0
+"' AND SUBSTRING((SELECT description FROM suppliers LIMIT 1),1,1)='a",1
+SELECT * FROM articles WHERE id = 360 OR 1=1,1
+SELECT * FROM students WHERE email = '2',0
+SELECT * FROM users WHERE password='2' OR 1=1 --,1
+SELECT * FROM payments ORDER BY id DESC LIMIT 353,0
+SELECT * FROM invoices WHERE username='test' OR '1'='1',1
+SELECT * FROM employees WHERE password IS NOT NULL,0
+SELECT DISTINCT amount FROM payments,0
+SELECT * FROM payments a JOIN clients b ON a.id = b.payments_id,0
+SELECT * FROM logs ORDER BY address DESC LIMIT 446,0
+"' AND 1=0 UNION SELECT amount, NULL FROM sessions --",1
+"SELECT role, address FROM sessions",0
+"SELECT * FROM employees WHERE age='admin' UNION SELECT username, password FROM employees --",1
+SELECT * FROM comments WHERE username = 'client01' OR '1'='1',1
+"SELECT * FROM transactions WHERE id IN (256, 257, 258)",0
+SELECT * FROM employees WHERE login='pending' AND password='' OR '1'='1',1
+UPDATE categories SET id = 'active' WHERE id = 403,0
+' OR pg_sleep(5) --,1
+DELETE FROM users WHERE id = 302,0
+SELECT * FROM students WHERE address = 396 AND age = 'guest',0
+1; DROP TABLE sessions,1
+SELECT * FROM logs WHERE id = 390 OR 1=1,1
+SELECT * FROM students ORDER BY description DESC LIMIT 472,0
+SELECT * FROM transactions WHERE password = 115 AND address = '50.5',0
+ALTER TABLE payments ADD COLUMN price VARCHAR(255),0
+SELECT * FROM products WHERE id=173 OR '1'='1' --,1
+"SELECT * FROM orders WHERE id IN (262, 263, 264)",0
+SELECT COUNT(*) FROM sessions,0
+DELETE FROM clients WHERE id = 407,0
+SELECT * FROM transactions WHERE id = 315,0
+SELECT * FROM articles WHERE id = 52 OR 1=1,1
+"SELECT username, id FROM products",0
+SELECT * FROM students WHERE name IS NOT NULL,0
+SELECT * FROM payments WHERE email LIKE '%active%',0
+"' AND 1=0 UNION SELECT username, NULL FROM accounts --",1
+' OR EXISTS(SELECT * FROM products) --,1
+UPDATE students SET name = '10' WHERE id = 264,0
+SELECT * FROM categories WHERE username='john' OR '1'='1',1
+SELECT * FROM clients WHERE username='pending' OR '1'='1',1
+SELECT * FROM articles LIMIT 418 OFFSET 209,0
+' OR 'a'='a,1
+SELECT * FROM suppliers WHERE id=203 OR '1'='1' --,1
+ALTER TABLE invoices ADD COLUMN created_at VARCHAR(255),0
+"SELECT * FROM products WHERE id IN (41, 42, 43)",0
+"INSERT INTO students (amount, address) VALUES ('active', '1')",0
+SELECT * FROM logs WHERE id = 193 OR 1=1,1
+SELECT * FROM clients ORDER BY status DESC LIMIT 257,0
+SELECT * FROM employees WHERE address='paris' OR 1=1 --,1
+DELETE FROM payments WHERE id = 261,0
+"' UNION SELECT username, password FROM accounts --",1
+SELECT * FROM transactions WHERE username BETWEEN 406 AND 456,0
+SELECT * FROM payments a JOIN invoices b ON a.id = b.payments_id,0
+"' AND SUBSTRING((SELECT name FROM clients LIMIT 1),1,1)='a",1
+SELECT * FROM clients WHERE created_at > '2023-01-01',0
+UPDATE students SET description = '50.5' WHERE id = 76,0
+SELECT COUNT(*) FROM payments,0
+SELECT * FROM accounts WHERE amount = '2',0
+SELECT name FROM invoices GROUP BY name,0
+' OR 1=1; SELECT * FROM logs; --,1
+DELETE FROM logs WHERE id = 113,0
+SELECT * FROM accounts WHERE stock IS NOT NULL,0
+SELECT * FROM sessions WHERE username='paris' OR '1'='1',1
+SELECT * FROM suppliers WHERE username = 'admin' AND password = '' OR ''='',1
+SELECT DISTINCT id FROM employees,0
+SELECT * FROM invoices WHERE username='1' OR 1=1#,1
+SELECT * FROM users WHERE id=464 OR '1'='1' --,1
+SELECT * FROM suppliers WHERE username='10' OR 1=1#,1
+SELECT * FROM sessions WHERE category IS NOT NULL,0
+SELECT * FROM sessions WHERE id = 493 AND username = 'active',0
+SELECT AVG(address) FROM categories,0
+SELECT category FROM users GROUP BY category,0
+"SELECT * FROM orders WHERE id IN (36, 37, 38)",0
+SELECT * FROM invoices WHERE email = '2024-01-01' OR '1'='1',1
+SELECT * FROM suppliers WHERE username='admin' OR '1'='1',1
+"SELECT id, age FROM products",0
+SELECT * FROM suppliers WHERE stock IS NOT NULL,0
+SELECT category FROM payments GROUP BY category,0
+SELECT * FROM categories a JOIN accounts b ON a.id = b.categories_id,0
+SELECT * FROM employees WHERE username = '100' OR '1'='1' --,1
+SELECT * FROM comments LIMIT 287 OFFSET 143,0
+SELECT * FROM clients WHERE username='guest' OR '1'='1',1
+SELECT * FROM students WHERE age BETWEEN 446 AND 496,0
+SELECT * FROM articles WHERE username = 'alice' AND password = '' OR ''='',1
+admin' #,1
+SELECT * FROM logs WHERE created_at > '2023-01-01',0
+SELECT * FROM students WHERE created_at > '2023-01-01',0
+"' AND 1=0 UNION SELECT role, NULL FROM comments --",1
+SELECT * FROM sessions WHERE id = 471 OR 1=1,1
+SELECT * FROM categories WHERE id=190 OR '1'='1' --,1
+SELECT * FROM users a JOIN invoices b ON a.id = b.users_id,0
+SELECT COUNT(*) FROM invoices,0
+"INSERT INTO payments (address, id) VALUES ('client01', '1')",0
+SELECT * FROM transactions WHERE username = 'guest' OR '1'='1' --,1
+SELECT * FROM clients WHERE id = 108 OR 1=1,1
+"SELECT * FROM products WHERE id IN (106, 107, 108)",0
+SELECT * FROM transactions WHERE id=158 OR '1'='1' --,1
+SELECT * FROM users WHERE status LIKE '%admin%',0
+"SELECT * FROM invoices WHERE price='pending' UNION SELECT username, password FROM invoices --",1
+' OR EXISTS(SELECT * FROM users) --,1
+'; DELETE FROM sessions WHERE 1=1; --,1
+SELECT * FROM comments WHERE username='2' OR '1'='1',1
+"SELECT address, password FROM employees",0
+SELECT AVG(password) FROM articles,0
+'; DROP TABLE sessions; --,1
